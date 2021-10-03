@@ -22,45 +22,68 @@ class ViewController: UIViewController {
 
     @IBAction func plus(_ sender: Any) {
         
-        let numb1 = Int(number1.text!)!
-        let numb2 = Int(number2.text!)!
+        if let numb1 = Int(number1.text!){
+           if let numb2 = Int(number2.text!) {
+                
+                let results = numb1 + numb2
+                
+                result.text = "\(results)"
+            }
+        }else{
+            
+            result.text = "PLEASE ENTER NUMBER"
+        }
+
         
-        let results = numb1 + numb2
-        
-        result.text = "\(results)"
+
     
     }
     
     @IBAction func minus(_ sender: Any) {
         
-        let numb1 = Int(number1.text!)!
-        let numb2 = Int(number2.text!)!
-        
-        let results = numb1 - numb2
-        
-        result.text = "\(results)"
+        if let numb1 = Int(number1.text!){
+           if let numb2 = Int(number2.text!) {
+                
+                let results = numb1 - numb2
+                
+                result.text = "\(results)"
+            }
+        }else{
+            
+            result.text = "PLEASE ENTER NUMBER"
+        }
         
     }
     
     @IBAction func multipy(_ sender: Any) {
         
-        let numb1 = Int(number1.text!)!
-        let numb2 = Int(number2.text!)!
-        
-        let results = numb1 * numb2
-        
-        result.text = "\(results)"
+        if let numb1 = Int(number1.text!){
+           if let numb2 = Int(number2.text!) {
+                
+                let results = numb1 * numb2
+                
+                result.text = "\(results)"
+            }
+        }else{
+            
+            result.text = "PLEASE ENTER NUMBER"
+        }
         
     }
     
     @IBAction func divide(_ sender: Any) {
         
-        let numb1 = Int(number1.text!)!
-        let numb2 = Int(number2.text!)!
-        
-        let results = numb1 / numb2
-        
-        result.text = "\(results)"
+        if let numb1 = Int(number1.text!){
+           if let numb2 = Int(number2.text!) {
+                
+                let results = numb1 / numb2
+                
+                result.text = "\(results)"
+            }
+        }else{
+            
+            result.text = "PLEASE ENTER NUMBER"
+        }
         
     }
     
