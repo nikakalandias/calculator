@@ -30,8 +30,7 @@ class ViewController: UIViewController {
                 result.text = "\(results)"
             }
         }else{
-            
-            result.text = "PLEASE ENTER NUMBER"
+            makeAlert()
         }
 
         
@@ -49,8 +48,7 @@ class ViewController: UIViewController {
                 result.text = "\(results)"
             }
         }else{
-            
-            result.text = "PLEASE ENTER NUMBER"
+            makeAlert()
         }
         
     }
@@ -65,8 +63,7 @@ class ViewController: UIViewController {
                 result.text = "\(results)"
             }
         }else{
-            
-            result.text = "PLEASE ENTER NUMBER"
+            makeAlert()
         }
         
     }
@@ -81,11 +78,23 @@ class ViewController: UIViewController {
                 result.text = "\(results)"
             }
         }else{
-            
-            result.text = "PLEASE ENTER NUMBER"
+            makeAlert()
         }
         
     }
     
+    func makeAlert(){
+        
+        let alert = UIAlertController(title: "Error", message: "Please enter only number!", preferredStyle: UIAlertController.Style.alert)
+        
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        
+        alert.addAction(okButton)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        result.text = "PLEASE ENTER NUMBER"
+        
+    }
+    
 }
-
